@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>VENDA DE PASSAGENS</title>
+    <style>
+        body{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            justify-items: center;
+            align-items: center;
+            align-content: center;
+            flex-direction: column;
+            margin: 0;
+        }
+        .principal
+        {
+            position: relative;
+        }
+        #P00
+        {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            left:58px;
+            top:172px; 
+            
+        }
+        #P01
+        {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            left:150px;
+            top:172px; 
+            
+        }
+        #P10
+        {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            left:58px;
+            top:260px; 
+        }
+        #P11
+        {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            left:150px;
+            top:260px; 
+
+        }
+        #P20
+        {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            left:58px;
+            top:350px; 
+
+        }
+        #P21
+        {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            left:150px;
+            top:350px; 
+
+        }
+        #P30
+        {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            left:58px;
+            top:440px; 
+
+        }
+        #P31
+        {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            left:150px;
+            top:440px; 
+
+        }
+        #P40
+        {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            left:58px;
+            top:530px; 
+        }
+        #P41
+        {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            left:150px;
+            top:530px; 
+
+        }
+        #P50
+        {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            left:58px;
+            top:619px; 
+
+        }
+        #P51
+        {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            left:150px;
+            top:619px; 
+
+        }
+        #P02
+        {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            left:320px;
+            top:172px; 
+
+        }
+        #P03
+        {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            left:413px;
+            top:172px; 
+
+        }
+        #P12
+        {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            left:320px;
+            top:260px; 
+
+        }
+        #P13
+        {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            left:413px;
+            top:260px; 
+
+        }
+        #P22
+        {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            left:320px;
+            top:350px; 
+
+        }
+    #P23
+        {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            left:413px;
+            top:350px; 
+
+        }
+        #P32
+        {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            left:320px;
+            top:440px; 
+
+        }
+        #P33
+        {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            left:413px;
+            top:440px; 
+
+        }
+        #P42
+        {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            left:320px;
+            top:530px; 
+
+        }
+        #P43
+        {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            left:413px;
+            top:530px; 
+
+        }
+        #P52
+        {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            left:320px;
+            top:619px; 
+
+        }
+        #P53
+        {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            left:413px;
+            top:619px; 
+
+        }
+        .mensagem
+        {
+            font-size: 30px;
+            width: 500px;
+            background-color: yellow;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body onload="Limpar();">
+
+    <div class="principal">
+        <img src="onibus.jpg">
+
+        <div onclick="Preencher('0');" class="poltrona" name="P00" id="P00"></div>  <!-- PRIMEIRA FILEIRA -->
+        <div onclick="Preencher('1');" class="poltrona" id="P01"></div>
+        <div onclick="Preencher('2');" class="poltrona" id="P02"></div>
+        <div onclick="Preencher('3');" class="poltrona" id="P03"></div>
+
+        <div onclick="Preencher('4');" class="poltrona" id="P10"></div>   <!-- SEGUNDA FILEIRA -->
+        <div onclick="Preencher('5');" class="poltrona" id="P11"></div>
+        <div onclick="Preencher('6');" class="poltrona" id="P12"></div>
+        <div onclick="Preencher('7');" class="poltrona" id="P13"></div>
+        <div onclick="Preencher('8');" class="poltrona" id="P20"></div>   <!-- TERCEIRA FILEIRA -->
+        <div onclick="Preencher('9');" class="poltrona" id="P21"></div>
+        <div onclick="Preencher('10');" class="poltrona" id="P22"></div>
+        <div onclick="Preencher('11');" class="poltrona" id="P23"></div>
+
+        <div onclick="Preencher('12');" class="poltrona" id="P30"></div>  <!-- QUARTA FILEIRA -->
+        <div onclick="Preencher('13');" class="poltrona" id="P31"></div>
+        <div onclick="Preencher('14');" class="poltrona" id="P32"></div>
+        <div onclick="Preencher('15');" class="poltrona" id="P33"></div>
+
+        <div onclick="Preencher('16');" class="poltrona" id="P40"></div>   <!-- QUINTA FILEIRA -->
+        <div onclick="Preencher('17');" class="poltrona" id="P41"></div>
+        <div onclick="Preencher('18');" class="poltrona" id="P42"></div>
+        <div onclick="Preencher('19');" class="poltrona" id="P43"></div>
+
+        <div onclick="Preencher('20');" class="poltrona" id="P50"></div>   <!-- SEXTA FILEIRA -->
+        <div onclick="Preencher('21');" class="poltrona" id="P51"></div>
+        <div onclick="Preencher('22');" class="poltrona" id="P52"></div>
+        <div onclick="Preencher('23');" class="poltrona" id="P53"></div>
+    </div>
+    <br>
+    <div class="mensagem" id="mensagem">
+        <p id="poltronas_livres">Cadeiras livres:24</p>
+    </div>
+</body>
+
+<script>
+        contador = 24
+       var elm = document.getElementsByClassName('poltrona')
+    function Preencher(qual){
+       // var elm = document.getElementById('P00')
+        var cor = elm[qual].style.backgroundColor
+       
+        if(cor == 'green'){
+            elm[qual].style.backgroundColor = 'red';
+            contador = contador - 1
+        }else{
+            elm[qual].style.backgroundColor = 'green';
+            contador = contador + 1
+        }
+        document.getElementById('poltronas_livres').innerHTML = 'Cadeiras livres:'+contador
+    }
+    function Limpar(){
+        for(i=0;i<24;i++){
+            poltronas = document.getElementsByClassName('poltrona')[i]
+            poltronas.style.backgroundColor = 'green'
+        } 
+    }
+
+
+</script>
+
+</html>
